@@ -10,17 +10,17 @@ module tt_um_akanksha_hu8785_d_latch (
     input  wire       clk,
     input  wire       rst_n
 );
-
     wire d = ui_in[0];
     wire e = ui_in[1];
 
     reg q;
 
+    /* verilator lint_off LATCH */
     always @(*) begin
         if (e)
             q = d;
     end
-
+    /* verilator lint_on LATCH */
     assign uo_out[0] = q;
     assign uo_out[1] = 1'b0;
     assign uo_out[2] = 1'b0;
