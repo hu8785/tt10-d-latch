@@ -1,20 +1,36 @@
-<!---
-
-This file is used to generate your project datasheet. Please fill in the information below and delete any unused
-sections.
-
-You can also include images in this folder and reference them in the markdown. Each image must be less than
-512 kb in size, and the combined size of all images must be less than 1 MB.
--->
-
 ## How it works
 
-Explain how your project works
+This project implements a D latch, also called a transparent latch.
+
+The inputs are:
+- d = data input
+- e = enable input
+
+The output is:
+- q
+
+When e = 1, the latch is transparent, so q follows d.  
+When e = 0, the latch holds its previous value.
+
+This makes the D latch a level-sensitive sequential circuit.
 
 ## How to test
 
-Explain how to use your project
+Change d and e and observe q.
+
+Expected behavior:
+- If e = 1, q follows d.
+- If e = 0, q keeps its previous value even if d changes.
 
 ## External hardware
 
-List external hardware used in your project (e.g. PMOD, LED display, etc), if any
+None
+
+## Pinout
+
+### Inputs
+- ui[0] = d
+- ui[1] = e
+
+### Outputs
+- uo[0] = q
